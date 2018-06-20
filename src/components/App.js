@@ -33,8 +33,9 @@ class App extends Component {
     return (
       <div className={classes.root}>
         <TopBar toggleVisible={this.toggleVisible} />
-
-        <SideNav open={this.state.open} toggleVisible={this.toggleVisible} />
+        {this.state.open && (
+          <SideNav open={this.state.open} toggleVisible={this.toggleVisible} />
+        )}
         <Liste />
       </div>
     );

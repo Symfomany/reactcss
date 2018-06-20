@@ -28,7 +28,7 @@ class SideNav extends Component {
 
     return (
       <div>
-        <StyledSideNav open={this.props.open}>
+        <StyledSideNav>
           <StyledSideNavClose onClick={this.props.toggleVisible}>
             <Clear />
           </StyledSideNavClose>

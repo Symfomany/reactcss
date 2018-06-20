@@ -1,21 +1,19 @@
 import styled, { keyframes } from "styled-components";
 
-const bounce = `
-     from {transform: translateY(0);}
-     to   {transform: translateY(-450px);}
+const bounce = keyframes`
+     0% {transform: translateX(-450px)}
+     100%   {transform: translateX(0px)}
 `;
 
 const StyledSideNav = styled.div`
   overflow: hidden;
   background-color: #8c6100;
-  transition: all 1s cubic-bezier(0.75, -0.5, 0, 1.75);
   position: fixed;
   width: 400px;
   height: 100%;
   top: 0;
-  left: -450px;
-  opacity: ${props => (props.open ? 1 : 0)};
-  animation: ${props => (props.open ? "bounce 0.35s ease " : "none")};
+  left: 0px;
+  animation: ${bounce} 0.35s ease;
 
   overflow-x: hidden;
   z-index: 1000;
@@ -27,7 +25,7 @@ const StyledSideNav = styled.div`
 `;
 
 const StyledSideNavTitle = styled.div`
-  font-size: 1.8em;
+  font-size: 2.8em;
   text-align: center;
 `;
 
